@@ -1,0 +1,149 @@
+/* Réinitialisation générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color:#333;
+    color:lightgray;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+h4{
+    color:rgb(114, 184, 214);
+    font-size: 20px;
+    font-family: Arial;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+li{
+    margin-top:1rem;
+    margin-bottom:1rem;
+    margin-left: 2rem;
+}
+p1{
+    font-size: 18px;
+}
+
+/* Header */
+header {
+    height: 15vh;
+    min-height: 15vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Section principale */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #333;
+}
+/* Maison fixe à gauche */
+.home-button {
+    position: absolute; /* Maison ancrée par rapport au header */
+    left: 20px; /* Distance depuis le bord gauche */
+    top: 7.5%; /* Centrage vertical */
+    transform: translateY(-50%); /* Correction de l'alignement vertical */
+    color: white; /* Couleur de l'icône */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-size: 1.5rem; /* Taille de l'icône */
+    background-color: transparent; /* Fond transparent */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 50%; /* Forme circulaire */
+    width: 3rem; /* Largeur du bouton */
+    height: 3rem; /* Hauteur du bouton */
+    display: flex; /* Permet le centrage */
+    align-items: center; /* Centre l'icône verticalement */
+    justify-content: center; /* Centre l'icône horizontalement */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.miniature{
+    max-width: 100%;
+}
+/* Styles des carrés */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: white; /* Assure que le texte reste lisible */
+}
+
+/* Couleurs spécifiques pour chaque carré */
+.box:nth-child(1) {
+    background-color:rgb(160, 95, 173);
+    margin-left: 10%;
+}
+
+.box:nth-child(2) {
+    background-color:rgb(102, 170, 102);
+    margin-right:10%; 
+}
+
+.box:nth-child(3) {
+    background-color: rgb(107, 107, 205);
+    margin-left: 10%;
+}
+
+.box:nth-child(4) {
+    background-color: rgb(207, 127, 70);
+    margin-right:10%; 
+}
+
+/* Petits appareils (téléphones) */
+@media (max-width: 600px) {
+    .box {
+        font-size:1rem;
+ } }
+    .home-button{
+        font-size:1rem;
+        width: 2rem; /* Largeur du bouton */
+        height: 2rem; /* Hauteur du bouton */
+    }
+
+    header{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    
+    body{
+        p1{
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+        h4{
+            font-size: 15px;
+        }
+        li{
+            font-size: 12px;
+        }
+    }
+
+    .miniature{
+        max-width: 100%;
+    }
